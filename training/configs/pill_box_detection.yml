@@ -1,0 +1,48 @@
+task: detection
+
+evaluator:
+  type: CocoEvaluator
+  iou_types: ['bbox', ]
+
+# 0-indexed: 0=pill, 1=box. NOT standard COCO's 1-indexed convention -- see
+# stage1_perception_arm/phase3_synthetic_data/logs/rtdetr_onnx_spec.md for
+# why (confirmed against the actual training code: with
+# remap_mscoco_category=False, this JSON's category_id is used as the
+# training label with zero further remap, and index 0 is safe -- this
+# architecture reserves num_classes, the LAST index, for no-object).
+num_classes: 2
+remap_mscoco_category: False
+
+
+train_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: /home/vishal/poc/stage1_perception_arm/phase3_synthetic_data/full_run_50k/basic_writer/
+    ann_file: /home/vishal/poc/stage1_perception_arm/phase3_synthetic_data/coco_annotations/train.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  num_workers: 4
+  drop_last: True
+  collate_fn:
+    type: BatchImageCollateFunction
+
+
+val_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: /home/vishal/poc/stage1_perception_arm/phase3_synthetic_data/full_run_50k/basic_writer/
+    ann_file: /home/vishal/poc/stage1_perception_arm/phase3_synthetic_data/coco_annotations/val.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: False
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFunction

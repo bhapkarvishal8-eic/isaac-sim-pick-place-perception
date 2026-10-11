@@ -1,0 +1,342 @@
+{
+  "camera": {
+    "height_m": 0.65,
+    "fov_h_deg": 66.0,
+    "fov_v_deg": null,
+    "fov_coverage_check": {
+      "required": {
+        "pills_region_corner_min": {
+          "pixel_xy": [
+            218.8,
+            617.9
+          ],
+          "in_bounds": true
+        },
+        "pills_region_corner_max": {
+          "pixel_xy": [
+            503.6,
+            459.9
+          ],
+          "in_bounds": true
+        },
+        "boxes_region_corner_min": {
+          "pixel_xy": [
+            774.3,
+            641.2
+          ],
+          "in_bounds": true
+        },
+        "boxes_region_corner_max": {
+          "pixel_xy": [
+            1088.9,
+            263.4
+          ],
+          "in_bounds": true
+        },
+        "shelf_front_opening_bottom_left": {
+          "pixel_xy": [
+            358.7,
+            490.7
+          ],
+          "in_bounds": true
+        },
+        "shelf_front_opening_top_right": {
+          "pixel_xy": [
+            1018.5,
+            163.6
+          ],
+          "in_bounds": true
+        }
+      },
+      "informational": {
+        "shelf_back_panel_top_corner": {
+          "pixel_xy": [
+            932.3,
+            2.8
+          ],
+          "in_bounds": true
+        }
+      }
+    },
+    "fov_covers_full_workspace": true
+  },
+  "object_classes": {
+    "pills": {
+      "count": 12,
+      "prototype": "fixtures/pill.usd",
+      "dimensions_m": {
+        "diameter": 0.008,
+        "height": 0.003
+      },
+      "spawn_region": {
+        "center_xy_m": [
+          -0.22,
+          -0.05
+        ],
+        "extent_xy_m": [
+          0.2,
+          0.16
+        ]
+      },
+      "instances": [
+        {
+          "path": "/World/Fixtures/Pills/pill_00",
+          "position_m": [
+            -0.19211464030842326,
+            -0.12599827916437328,
+            0.0016
+          ],
+          "color_rgb": [
+            0.85,
+            0.15,
+            0.15
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_01",
+          "position_m": [
+            -0.26499413632617613,
+            -0.09428628189618837,
+            0.0016
+          ],
+          "color_rgb": [
+            0.15,
+            0.55,
+            0.85
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_02",
+          "position_m": [
+            -0.17270575716719752,
+            -0.0217280820123342,
+            0.0016
+          ],
+          "color_rgb": [
+            0.9,
+            0.85,
+            0.2
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_03",
+          "position_m": [
+            -0.1415640864590309,
+            -0.11608978677929342,
+            0.0016
+          ],
+          "color_rgb": [
+            0.2,
+            0.75,
+            0.35
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_04",
+          "position_m": [
+            -0.23561563606294592,
+            -0.12523244488990876,
+            0.0016
+          ],
+          "color_rgb": [
+            0.8,
+            0.8,
+            0.85
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_05",
+          "position_m": [
+            -0.2762724050392793,
+            -0.04914315390346202,
+            0.0016
+          ],
+          "color_rgb": [
+            0.85,
+            0.15,
+            0.15
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_06",
+          "position_m": [
+            -0.31469280606322725,
+            -0.09818597589013625,
+            0.0016
+          ],
+          "color_rgb": [
+            0.15,
+            0.55,
+            0.85
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_07",
+          "position_m": [
+            -0.19002311244409537,
+            -0.042809363103485334,
+            0.0016
+          ],
+          "color_rgb": [
+            0.9,
+            0.85,
+            0.2
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_08",
+          "position_m": [
+            -0.27591187559186064,
+            -0.03571749057985461,
+            0.0016
+          ],
+          "color_rgb": [
+            0.2,
+            0.75,
+            0.35
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_09",
+          "position_m": [
+            -0.15811390866443467,
+            -0.12896019845151024,
+            0.0016
+          ],
+          "color_rgb": [
+            0.8,
+            0.8,
+            0.85
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_10",
+          "position_m": [
+            -0.15883614963343842,
+            -0.0182976968018837,
+            0.0016
+          ],
+          "color_rgb": [
+            0.85,
+            0.15,
+            0.15
+          ]
+        },
+        {
+          "path": "/World/Fixtures/Pills/pill_11",
+          "position_m": [
+            -0.2519498966964016,
+            -0.10512328003011495,
+            0.0016
+          ],
+          "color_rgb": [
+            0.15,
+            0.55,
+            0.85
+          ]
+        }
+      ]
+    },
+    "boxes": {
+      "count": 6,
+      "prototype": "fixtures/box.usd",
+      "size_variants_m": {
+        "Small_10cm": 0.1,
+        "Medium_15cm": 0.15,
+        "Large_20cm": 0.2
+      },
+      "spawn_region": {
+        "center_xy_m": [
+          0.22,
+          -0.05
+        ],
+        "extent_xy_m": [
+          0.24,
+          0.2
+        ]
+      },
+      "instances": [
+        {
+          "path": "/World/Fixtures/Boxes/box_00",
+          "position_m": [
+            0.12,
+            -0.15000000000000002,
+            0.05
+          ],
+          "size_variant": "Small_10cm",
+          "side_m": 0.1
+        },
+        {
+          "path": "/World/Fixtures/Boxes/box_01",
+          "position_m": [
+            0.22,
+            -0.15000000000000002,
+            0.075
+          ],
+          "size_variant": "Medium_15cm",
+          "side_m": 0.15
+        },
+        {
+          "path": "/World/Fixtures/Boxes/box_02",
+          "position_m": [
+            0.32,
+            -0.15000000000000002,
+            0.1
+          ],
+          "size_variant": "Large_20cm",
+          "side_m": 0.2
+        },
+        {
+          "path": "/World/Fixtures/Boxes/box_03",
+          "position_m": [
+            0.12,
+            0.03,
+            0.05
+          ],
+          "size_variant": "Small_10cm",
+          "side_m": 0.1
+        },
+        {
+          "path": "/World/Fixtures/Boxes/box_04",
+          "position_m": [
+            0.22,
+            0.03,
+            0.075
+          ],
+          "size_variant": "Medium_15cm",
+          "side_m": 0.15
+        },
+        {
+          "path": "/World/Fixtures/Boxes/box_05",
+          "position_m": [
+            0.32,
+            0.03,
+            0.1
+          ],
+          "size_variant": "Large_20cm",
+          "side_m": 0.2
+        }
+      ]
+    },
+    "shelf": {
+      "count": 1,
+      "prototype": "fixtures/shelf.usd",
+      "compartments": "3x2",
+      "footprint_m": {
+        "width": 0.48,
+        "depth": 0.25,
+        "height": 0.32
+      },
+      "instances": [
+        {
+          "path": "/World/Fixtures/Shelf",
+          "position_m": [
+            0.0,
+            0.12,
+            0.0
+          ]
+        }
+      ]
+    }
+  }
+}
